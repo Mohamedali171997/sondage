@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme de Sondage Simple</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Ma Plateforme de Sondage</h1>
+        <nav>
+            <button onclick="showSection('create-survey-section')">Créer un Sondage</button>
+            <button onclick="showSection('participate-survey-section')">Participer à un Sondage</button>
+            <button onclick="showSection('view-results-section')">Voir les Résultats</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="create-survey-section" class="active-section">
+            <h2>Créer un Nouveau Sondage</h2>
+            <form id="create-survey-form">
+                <label for="survey-title">Titre du Sondage :</label>
+                <input type="text" id="survey-title" placeholder="Ex: Votre boisson préférée" required>
+                
+                <h3>Questions :</h3>
+                <div id="questions-container">
+                    </div>
+                <button type="button" id="add-question-btn">Ajouter une Question</button>
+                
+                <button type="submit">Créer le Sondage</button>
+            </form>
+            <div id="survey-code-display" class="hidden">
+                <p>Votre sondage a été créé ! Partagez ce code :</p>
+                <strong id="generated-survey-code"></strong>
+                <button onclick="copySurveyCode()">Copier le code</button>
+            </div>
+        </section>
+
+        <section id="participate-survey-section" class="hidden">
+            <h2>Participer à un Sondage</h2>
+            <form id="load-survey-form">
+                <label for="participate-survey-code">Code du Sondage :</label>
+                <input type="text" id="participate-survey-code" placeholder="Entrez le code du sondage" required>
+                <button type="submit">Charger le Sondage</button>
+            </form>
+            <div id="survey-participation-area" class="hidden">
+                <h3 id="loaded-survey-title"></h3>
+                <form id="submit-answers-form">
+                    <div id="loaded-questions-container">
+                        </div>
+                    <button type="submit">Soumettre les Réponses</button>
+                </form>
+            </div>
+            <p id="participation-message" class="hidden"></p>
+        </section>
+
+        <section id="view-results-section" class="hidden">
+            <h2>Voir les Résultats d'un Sondage</h2>
+            <form id="load-results-form">
+                <label for="results-survey-code">Code du Sondage :</label>
+                <input type="text" id="results-survey-code" placeholder="Entrez le code du sondage" required>
+                <button type="submit">Voir les Résultats</button>
+            </form>
+            <div id="survey-results-area" class="hidden">
+                <h3 id="results-survey-title"></h3>
+                <div id="results-container">
+                    </div>
+            </div>
+            <p id="results-message" class="hidden"></p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

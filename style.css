@@ -1,0 +1,141 @@
+/* Réinitialisation des styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Barre de navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+nav button {
+    background: #0056b3;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+nav button:hover {
+    background: #004085;
+}
+
+/* Conteneur principal */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+/* Titres */
+h2, h3 {
+    color: #007bff;
+    border-bottom: 3px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Boutons */
+button {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background: #28a745;
+    color: white;
+    border: none;
+}
+
+button[type="submit"]:hover {
+    background: #218838;
+}
+
+/* Messages */
+.success-message {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.9rem;
+}
+
+/* Résultats */
+.result-bar {
+    background: #007bff;
+    height: 100%;
+    width: 0%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    font-size: 0.8rem;
+    padding-right: 5px;
+    box-sizing: border-box;
+}

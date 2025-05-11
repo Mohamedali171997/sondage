@@ -1,0 +1,80 @@
+[debug] [2025-05-10T17:59:59.094Z] ----------------------------------------------------------------------
+[debug] [2025-05-10T17:59:59.106Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dali\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-05-10T17:59:59.107Z] CLI Version:   14.3.1
+[debug] [2025-05-10T17:59:59.108Z] Platform:      win32
+[debug] [2025-05-10T17:59:59.109Z] Node Version:  v20.9.0
+[debug] [2025-05-10T17:59:59.110Z] Time:          Sat May 10 2025 18:59:59 GMT+0100 (UTC+01:00)
+[debug] [2025-05-10T17:59:59.110Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-10T17:59:59.134Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-10T17:59:59.136Z] > authorizing via signed-in user (alihadjali97@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\sondage\sondage
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-05-10T18:01:17.646Z] Checked if tokens are valid: true, expires at: 1746903108670
+[debug] [2025-05-10T18:01:17.647Z] Checked if tokens are valid: true, expires at: 1746903108670
+[debug] [2025-05-10T18:01:17.663Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-05-10T18:01:19.113Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-05-10T18:01:19.113Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project survey-4756f (survey) 
+[info] 
+=== Hosting Setup
+[debug] [2025-05-10T18:01:37.377Z] Checked if tokens are valid: true, expires at: 1746903108670
+[debug] [2025-05-10T18:01:37.377Z] Checked if tokens are valid: true, expires at: 1746903108670
+[debug] [2025-05-10T18:01:37.379Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/survey-4756f [none]
+[debug] [2025-05-10T18:01:37.801Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/survey-4756f 200
+[debug] [2025-05-10T18:01:37.802Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/survey-4756f {"projectId":"survey-4756f","projectNumber":"420924298018","displayName":"survey","name":"projects/survey-4756f","resources":{"hostingSite":"survey-4756f"},"state":"ACTIVE","etag":"1_41f35306-bda2-4361-91a2-a3995328ea7b"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2025-05-10T18:05:51.481Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2025-05-10T18:05:51.838Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2025-05-10T18:05:51.838Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"11.7.1","browserURL":"https://www.gstatic.com/firebasejs/11.7.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/11.7.1/firebase.tgz"},"live":{"version":"11.7","browserURL":"https://www.gstatic.com/firebasejs/live/11.7/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/11.7/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/11.7.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/11.7.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/11.7.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/11.7.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/11.7.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/11.7.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/11.7.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/11.7.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/11.7.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/11.7.1/firebase-database.js","vertexai":"https://www.gstatic.com/firebasejs/11.7.1/firebase-vertexai.js","data-connect":"https://www.gstatic.com/firebasejs/11.7.1/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.memory.js"}}
+[info] +  Wrote ./index.html 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming D:\sondage\sondage is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=186014777&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2025-05-10T18:06:20.022Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2025-05-10T18:06:20.023Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2025-05-10T18:06:20.671Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2025-05-10T18:06:20.672Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2025-05-10T18:06:20.692Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2025-05-10T18:06:21.685Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2025-05-10T18:06:21.686Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Mohamedali171997","id":121984898,"node_id":"U_kgDOB0VXgg","avatar_url":"https://avatars.githubusercontent.com/u/121984898?v=4","gravatar_id":"","url":"https://api.github.com/users/Mohamedali171997","html_url":"https://github.com/Mohamedali171997","followers_url":"https://api.github.com/users/Mohamedali171997/followers","following_url":"https://api.github.com/users/Mohamedali171997/following{/other_user}","gists_url":"https://api.github.com/users/Mohamedali171997/gists{/gist_id}","starred_url":"https://api.github.com/users/Mohamedali171997/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Mohamedali171997/subscriptions","organizations_url":"https://api.github.com/users/Mohamedali171997/orgs","repos_url":"https://api.github.com/users/Mohamedali171997/repos","events_url":"https://api.github.com/users/Mohamedali171997/events{/privacy}","received_events_url":"https://api.github.com/users/Mohamedali171997/received_events","type":"User","user_view_type":"private","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"notification_email":null,"public_repos":7,"public_gists":0,"followers":0,"following":0,"created_at":"2023-01-04T23:02:21Z","updated_at":"2025-05-06T23:34:40Z","private_gists":0,"total_private_repos":2,"owned_private_repos":2,"disk_usage":14613,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Mohamedali171997 
+[info] 
+[debug] [2025-05-10T18:13:52.493Z] >>> [apiv2][query] GET https://api.github.com/repos/Mohamedali171997/my-survey-repo/actions/secrets/public-key type=owner
+[debug] [2025-05-10T18:13:58.647Z] <<< [apiv2][status] GET https://api.github.com/repos/Mohamedali171997/my-survey-repo/actions/secrets/public-key 200
+[debug] [2025-05-10T18:13:58.648Z] <<< [apiv2][body] GET https://api.github.com/repos/Mohamedali171997/my-survey-repo/actions/secrets/public-key {"key_id":"3380204578043523366","key":"znwC8TWRVts0KmjNw0L7UyUekE6vlI7zKViAr0F4b1g="}
+[debug] [2025-05-10T18:13:58.661Z] >>> [apiv2][query] GET https://api.github.com/repos/undefined [none]
+[debug] [2025-05-10T18:14:00.867Z] <<< [apiv2][status] GET https://api.github.com/repos/undefined 404
+[debug] [2025-05-10T18:14:00.867Z] <<< [apiv2][body] GET https://api.github.com/repos/undefined {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[debug] [2025-05-10T18:14:05.944Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\dali\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:270:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
