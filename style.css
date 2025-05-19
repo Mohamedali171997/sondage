@@ -163,3 +163,63 @@ form .add-option-btn:hover {
     font-size: 14px;
     color: #333;
 }
+
+
+
+
+
+/* Ensure the header is positioned relative so absolute children are relative to it */
+.site-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* keep navigation centered if you'd like */
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  /* Position the switcher in the top‐left corner of the header */
+  .lang-switcher {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: inline-block;
+  }
+  
+  /* Rest of your switcher styles */
+  .lang-switcher select {
+    appearance: none;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .lang-switcher select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  .lang-switcher .lang-icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    fill: #666;
+    pointer-events: none;
+    transition: fill 0.2s;
+  }
+  .lang-switcher select:focus + .lang-icon {
+    fill: #007bff;
+  }
+  html[dir="rtl"] .lang-switcher .lang-icon {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .lang-switcher select:hover {
+    border-color: #888;
+  }
+  

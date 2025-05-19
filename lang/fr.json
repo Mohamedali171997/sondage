@@ -14,6 +14,14 @@
     "loadSurvey": "Charger le Sondage",
     "submitAnswers": "Soumettre les Réponses",
     "viewResults": "Voir les Résultats d'un Sondage",
-    "viewResultsBtn": "Voir les Résultats"
-  }
+    "viewResultsBtn": "Voir les Résultats",
+ 
+    
+        "questionLabel": "Question",
+        "examplePlaceholder": "Ex: Quelle est votre couleur préférée?",
+        "optionsLabel": "Options:",
+        "optionText": "Option",
+        "addOption": "Ajouter une option"
+      
+}
   

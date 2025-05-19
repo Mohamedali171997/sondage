@@ -139,13 +139,27 @@ function showMessage(element, message, type = 'success') {
     element.classList.add(`${type}-message`);
 }
 
-function copySurveyCode() {
-    const code = generatedSurveyCode.textContent;
-    navigator.clipboard.writeText(code).then(() => {
-        alert('Code du sondage copié dans le presse-papiers !');
-    }).catch(err => {
-        console.error('Erreur lors de la copie du code: ', err);
-    });
+async function copySurveyCode() {
+    const surveyCode = generatedSurveyCode.textContent;
+    const templatePath = 'survey_code_template.html'; // Assure-toi que le chemin est correct
+
+    try {
+        const response = await fetch(templatePath);
+        if (!response.ok) {
+            throw new Error(`Impossible de charger le modèle HTML : ${response.status}`);
+        }
+        let emailBody = await response.text();
+
+        // Remplacer le marqueur {surveyCode} par le code réel
+        emailBody = emailBody.replace('{surveyCode}', surveyCode);
+
+        await navigator.clipboard.writeText(emailBody);
+        alert('Code HTML pour l\'e-mail copié dans le presse-papiers !');
+
+    } catch (error) {
+        console.error('Erreur lors de la lecture ou de la copie du modèle d\'e-mail : ', error);
+        alert('Erreur lors de la copie du code HTML.');
+    }
 }
 
 // --- Création de Sondage ---
