@@ -4,14 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partagez le code de votre sondage</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f5f7fa; /* Couleur de fond similaire à votre site */
+            color: #333; /* Couleur de texte principale */
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police de caractères de votre site */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Pour centrer le contenu sur la page si l'e-mail est affiché dans un navigateur */
+        }
+        .email-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour la profondeur */
+            width: 100%;
+            max-width: 600px; /* Largeur maximale pour un affichage agréable sur différents écrans */
+        }
+        .email-header {
+            background-color: #4a90e2; /* Couleur de l'en-tête de votre site */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+            margin-bottom: 20px;
+        }
+        .email-body p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .code-container {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            white-space: pre-wrap; /* Pour conserver les espaces et les sauts de ligne */
+            font-family: monospace; /* Police à chasse fixe pour le code */
+        }
+        .email-footer {
+            color: #777;
+            font-size: 0.9em;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .platform-link {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; margin: 20px;">
-    <p>Bonjour,</p>
-    <p>Voici le code de votre sondage. Vous pouvez le partager avec les participants :</p>
-    <pre style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 1.1em;">
-        <code>{surveyCode}</code>
-    </pre>
-    <p>Les participants pourront utiliser ce code sur la page de participation de notre plateforme.</p>
-    <p>Cordialement,<br>L'équipe de votre plateforme de sondage</p>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h1>Partagez votre code de sondage</h1>
+        </div>
+        <div class="email-body">
+            <p>Bonjour,</p>
+            <p>Merci d'utiliser notre plateforme de sondage. Voici le code unique que vous pouvez partager avec les participants pour qu'ils accèdent à votre sondage :</p>
+            <div class="code-container">
+                <code>{surveyCode}</code>
+            </div>
+            <p>Pour participer au sondage, les utilisateurs devront se rendre sur la page de participation de notre site et y entrer ce code.</p>
+            <p>N'hésitez pas à partager ce code par e-mail, sur les réseaux sociaux ou via tout autre moyen de communication de votre choix.</p>
+            <p>Cordialement,<br>L'équipe de <a href="#" class="platform-link">Votre Plateforme de Sondage</a></p>
+        </div>
+        <div class="email-footer">
+            <p>Ceci est un e-mail généré automatiquement par notre plateforme.</p>
+        </div>
+    </div>
 </body>
 </html>
