@@ -43,6 +43,70 @@ const resultsContainer = document.getElementById('results-container');
 const resultsMessage = document.getElementById('results-message');
 
 let questionCount = 0; // Compteur pour les questions
+// --- language selectore
+const langSwitcher = document.getElementById("language-switcher");
+
+function setLanguage(lang) {
+    document.documentElement.lang = lang;
+document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
+
+    fetch(`lang/${lang}.json`)
+        .then(response => {
+            if (!response.ok) throw new Error("Language file not found");
+            return response.json();
+        })
+        .then(data => {
+            const map = [
+                ["header h1", data.title],
+                ["nav button:nth-child(1)", data.create],
+                ["nav button:nth-child(2)", data.participate],
+                ["nav button:nth-child(3)", data.results],
+                ["#create-survey-section h2", data.createSurvey],
+                ["label[for='survey-title']", data.surveyTitleLabel],
+                ["#add-question-btn", data.addQuestion],
+                ["#create-survey-form button[type='submit']", data.submitSurvey],
+                ["#survey-code-display p", data.surveyCreated],
+                ["#survey-code-display button", data.copyCode],
+                ["#participate-survey-section h2", data.participateSurvey],
+                ["label[for='participate-survey-code']", data.enterCode],
+                ["#load-survey-form button", data.loadSurvey],
+                ["#submit-answers-form button", data.submitAnswers],
+                ["#view-results-section h2", data.viewResults],
+                ["label[for='results-survey-code']", data.enterCode],
+                ["#load-results-form button", data.viewResultsBtn]
+            ];
+
+            map.forEach(([selector, text]) => {
+                const el = document.querySelector(selector);
+                if (el && typeof text === "string") {
+                    el.textContent = text;
+                } else if (!el) {
+                    console.warn(`Element not found for selector: ${selector}`);
+                } else if (typeof text !== "string") {
+                    console.warn(`Missing translation key for selector: ${selector}`);
+                }
+            });
+
+            // Handle all "Copy Code" buttons reliably
+            document.getElementById("copy-btn-1").textContent = data.copyCode || "Copy Code";
+            document.getElementById("copy-btn-2").textContent = data.copyCode || "Copy Code";
+            
+            document.title = data.title || "Survey App";
+            localStorage.setItem("lang", lang);
+        })
+        .catch(err => {
+            console.error("Language loading error:", err);
+        });
+}
+
+langSwitcher.addEventListener("change", (e) => setLanguage(e.target.value));
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("lang") || "fr";
+    langSwitcher.value = savedLang;
+    setLanguage(savedLang);
+});
+
 
 // --- Fonctions Utilitaires ---
 
@@ -178,7 +242,9 @@ createSurveyForm.addEventListener('submit', async (e) => {
             questions: questions,
             createdAt: firebase.firestore.FieldValue.serverTimestamp()
         });
+       // clearForm(createSurveyForm);
         generatedSurveyCode.textContent = docRef.id;
+        //clearForm(createSurveyForm);
         surveyCodeDisplay.classList.remove('hidden');
         clearForm(createSurveyForm);
         showMessage(surveyCodeDisplay, `Votre sondage a été créé ! Partagez ce code : ${docRef.id}`, 'success');

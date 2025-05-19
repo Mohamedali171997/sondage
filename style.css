@@ -1,141 +1,165 @@
-/* Réinitialisation des styles de base */
-* {
+/* Global Styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
     color: #333;
-    line-height: 1.6;
 }
 
-/* En-tête */
 header {
-    background: linear-gradient(90deg, #007bff, #0056b3);
+    background-color: #4a90e2;
     color: white;
-    padding: 1.5rem 0;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Barre de navigation */
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem 0;
+    margin-top: 10px;
 }
 
-nav button {
-    background: #0056b3;
+nav .button {
+    margin: 0 5px;
+}
+
+/* Button Styles */
+.button,
+button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    background-color: #4a90e2;
     color: white;
+    text-decoration: none;
     border: none;
-    padding: 0.75rem 1.5rem;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: 0.3s ease;
 }
 
-nav button:hover {
-    background: #004085;
+.button:hover,
+button:hover {
+    background-color: #357ab8;
 }
 
-/* Conteneur principal */
+/* Forms and Sections */
 main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: white;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Sections */
-section {
-    padding: 20px;
-    border-bottom: 2px solid #eee;
-}
-
-section:last-child {
-    border-bottom: none;
-}
-
-/* Titres */
-h2, h3 {
-    color: #007bff;
-    border-bottom: 3px solid #eee;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-/* Formulaire */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
+form label {
     display: block;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-/* Boutons */
-button {
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-button[type="submit"] {
-    background: #28a745;
-    color: white;
-    border: none;
-}
-
-button[type="submit"]:hover {
-    background: #218838;
-}
-
-/* Messages */
-.success-message {
-    color: #28a745;
+    margin: 15px 0 5px;
     font-weight: bold;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form .question-item,
+form .option-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-left: 4px solid #4a90e2;
+    background-color: #f0f4f8;
+    border-radius: 5px;
+}
+
+form .options-container {
+    margin-top: 10px;
+}
+
+form .remove-option-btn,
+form .remove-question-btn {
+    background-color: #e74c3c;
+    margin-left: 5px;
+}
+
+form .remove-option-btn:hover,
+form .remove-question-btn:hover {
+    background-color: #c0392b;
+}
+
+form .add-option-btn {
+    background-color: #2ecc71;
+}
+
+form .add-option-btn:hover {
+    background-color: #27ae60;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Message Styling */
+.success-message {
+    color: green;
+    margin-top: 15px;
 }
 
 .error-message {
-    color: #dc3545;
-    font-size: 0.9rem;
+    color: red;
+    margin-top: 15px;
 }
 
-/* Résultats */
-.result-bar {
-    background: #007bff;
-    height: 100%;
-    width: 0%;
-    border-radius: 4px;
+.info-message {
+    color: #333;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* Landing Page */
+.landing-options {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    color: white;
-    font-size: 0.8rem;
-    padding-right: 5px;
-    box-sizing: border-box;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .landing-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        margin: 10px;
+    }
+}
+/* Résultats du sondage */
+.result-bar-container {
+    margin: 10px 0;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.result-bar {
+    height: 24px;
+    line-height: 24px;
+    padding-left: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    transition: width 0.5s ease-in-out;
+    background: linear-gradient(to right, #0074D9, #00c3ff);
+}
+
+/* Texte au-dessus de chaque barre */
+.result-label {
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
 }

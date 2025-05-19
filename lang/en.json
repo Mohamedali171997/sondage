@@ -1,0 +1,25 @@
+{
+    "title": "My Simple Survey Platform",
+    "create": "Create Survey",
+    "participate": "Participate",
+    "results": "Results",
+    "createSurvey": "Create a New Survey",
+    "surveyTitleLabel": "Survey Title:",
+    "addQuestion": "Add Question",
+    "submitSurvey": "Create Survey",
+    "copyCode": "Copy Code",
+    "surveyCreated": "Your survey has been created! Share this code:",
+    "participateSurvey": "Participate in a Survey",
+    "enterCode": "Survey Code:",
+    "loadSurvey": "Load Survey",
+    "submitAnswers": "Submit Answers",
+    "viewResults": "View Survey Results",
+    "viewResultsBtn": "View Results",
+        "questionLabel": "Question",
+        "examplePlaceholder": "Ex: What is your favorite color?",
+        "optionsLabel": "Options:",
+        "optionText": "Option",
+        "addOption": "Add Option"
+      
+      }
+  

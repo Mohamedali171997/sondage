@@ -1,0 +1,19 @@
+{
+    "title": "Ma Plateforme de Sondage Simple",
+    "create": "Créer un Sondage",
+    "participate": "Participer",
+    "results": "Résultats",
+    "createSurvey": "Créer un Nouveau Sondage",
+    "surveyTitleLabel": "Titre du Sondage :",
+    "addQuestion": "Ajouter une Question",
+    "submitSurvey": "Créer le Sondage",
+    "copyCode": "Copier le code",
+    "surveyCreated": "Votre sondage a été créé ! Partagez ce code :",
+    "participateSurvey": "Participer à un Sondage",
+    "enterCode": "Code du Sondage :",
+    "loadSurvey": "Charger le Sondage",
+    "submitAnswers": "Soumettre les Réponses",
+    "viewResults": "Voir les Résultats d'un Sondage",
+    "viewResultsBtn": "Voir les Résultats"
+  }
+  

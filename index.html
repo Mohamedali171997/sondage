@@ -10,6 +10,12 @@
 </head>
 <body>
     <header>
+        <select id="language-switcher">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
+          
         <h1>Ma Plateforme de Sondage</h1>
         <nav>
             <button onclick="showSection('create-survey-section')">Créer un Sondage</button>
@@ -24,6 +30,7 @@
             <form id="create-survey-form">
                 <label for="survey-title">Titre du Sondage :</label>
                 <input type="text" id="survey-title" placeholder="Ex: Votre boisson préférée" required>
+                <button id="copy-btn-1" onclick="copySurveyCode()">Copier le code</button>
                 
                 <h3>Questions :</h3>
                 <div id="questions-container">
@@ -35,7 +42,7 @@
             <div id="survey-code-display" class="hidden">
                 <p>Votre sondage a été créé ! Partagez ce code :</p>
                 <strong id="generated-survey-code"></strong>
-                <button onclick="copySurveyCode()">Copier le code</button>
+                <button id="copy-btn-2" onclick="copySurveyCode()">Copier le code</button>
             </div>
         </section>
 

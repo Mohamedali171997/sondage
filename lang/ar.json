@@ -1,0 +1,19 @@
+{
+    "title": "منصة الاستبيانات البسيطة",
+    "create": "إنشاء استبيان",
+    "participate": "المشاركة",
+    "results": "النتائج",
+    "createSurvey": "إنشاء استبيان جديد",
+    "surveyTitleLabel": "عنوان الاستبيان:",
+    "addQuestion": "إضافة سؤال",
+    "submitSurvey": "إنشاء الاستبيان",
+    "copyCode": "نسخ الرمز",
+    "surveyCreated": "تم إنشاء الاستبيان! شارك هذا الرمز:",
+    "participateSurvey": "المشاركة في استبيان",
+    "enterCode": "رمز الاستبيان:",
+    "loadSurvey": "تحميل الاستبيان",
+    "submitAnswers": "إرسال الإجابات",
+    "viewResults": "عرض نتائج الاستبيان",
+    "viewResultsBtn": "عرض النتائج"
+  }
+  
